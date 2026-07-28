@@ -35,10 +35,26 @@ hr{
     margin:30px 0;
 }
 
-.check{
+.certificate-header{
     display:flex;
     justify-content:center;
-    margin:20px 0;
+    align-items:flex-start;
+    gap:18px;
+    margin:30px 0;
+}
+
+.badge-icon{
+    width:55px;
+    height:55px;
+    margin-top:10px;
+}
+
+.title{
+    color:#006400;
+    font-size:48px;
+    font-weight:700;
+    line-height:0.95;
+    text-align:left;
 }
 
 .badge-icon{
@@ -122,11 +138,15 @@ hr{
 
     <hr>
 
-  <div class="check">
-    <img src="badge.png" class="badge-icon" alt="Verified">
-</div>
+  <div class="certificate-header">
 
-    <div class="title">Certificate Found</div>
+    <img src="badge.png" class="badge-icon" alt="Verified">
+
+    <div class="title">
+        Certificate<br>Found
+    </div>
+
+</div>
 
     <p class="desc">
         Please check that your certificate matches the information below.
