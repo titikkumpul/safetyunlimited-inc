@@ -9,7 +9,7 @@
 body{
     margin:0;
     background:#ffffff;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .container{
@@ -22,6 +22,7 @@ body{
 .logo{
     width:280px;
     margin:30px auto;
+    display:block;
 }
 
 hr{
@@ -66,57 +67,6 @@ hr{
     color:#0078a8;
 }
 
-.footer{
-    margin-top:30px;
-    color:#888;
-}
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<img class="logo" src="logo.png">
-
-<hr>
-
-<div class="check">✔</div>
-
-<div class="title">Certificate Found</div>
-
-<p class="desc">
-Please check that your certificate matches the information below.<br><br>
-If your certificate does not match,<br>
-please call (800) 680-3789 ext. 300.
-</p>
-
-<div class="card">
-
-<div class="name">
-Jumadil Jati
-</div>
-
-<div class="course">
-Hydrogen Sulfide<br>
-Awareness Training
-</div>
-<hr class="card-line">
-
-<div class="info">
-    <p>Certificate #: <strong>260702620431549</strong></p>
-    <p>Issue Date: <strong>02/07/2027</strong></p>
-</div>
-
-<div class="footer">
-Certificate Verification
-</div>
-
-</div>
-
-</body>
-</html>
 .card-line{
     border:none;
     border-top:2px solid #e5e5e5;
@@ -138,3 +88,62 @@ Certificate Verification
     color:#000;
     font-weight:bold;
 }
+
+.footer{
+    margin-top:30px;
+    color:#888;
+    font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <img class="logo" src="logo.png" alt="Logo">
+
+    <hr>
+
+    <div class="check">✔</div>
+
+    <div class="title">Certificate Found</div>
+
+    <p class="desc">
+        Please check that your certificate matches the information below.
+    </p>
+
+    <p class="desc">
+        If your certificate does not match, please call
+        <strong>(800) 680-3789 ext. 300.</strong>
+    </p>
+
+    <div class="card">
+
+        <div class="name">
+            Jumadil Jati
+        </div>
+
+        <div class="course">
+            Hydrogen Sulfide<br>
+            Awareness Training
+        </div>
+
+        <hr class="card-line">
+
+        <div class="info">
+            <p>Certificate #: <strong>260702620431549</strong></p>
+            <p>Issue Date: <strong>02/07/2027</strong></p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Certificate Verification
+    </div>
+
+</div>
+
+</body>
+</html>
