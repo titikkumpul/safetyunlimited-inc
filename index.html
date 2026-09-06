@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certificate Found</title>
-    
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 body{
     margin:0;
@@ -138,15 +139,15 @@ hr{
 
     <hr>
 
-  <div class="certificate-header">
+    <div class="certificate-header">
 
-    <img src="badge.png" class="badge-icon" alt="Verified">
+        <img src="badge.png" class="badge-icon" alt="Verified">
 
-    <div class="title">
-        Certificate<br>Found
+        <div class="title">
+            Certificate<br>Found
+        </div>
+
     </div>
-
-</div>
 
     <p class="desc">
         Please check that your certificate matches the information below.
@@ -159,11 +160,11 @@ hr{
 
     <div class="card">
 
-        <div class="name">
+        <div class="name" id="certificateName">
             Jumadil Jati
         </div>
 
-        <div class="course">
+        <div class="course" id="certificateCourse">
             Hydrogen Sulfide<br>
             Awareness Training
         </div>
@@ -171,8 +172,15 @@ hr{
         <hr class="card-line">
 
         <div class="info">
-            <p>Certificate #: <strong>260702620431549</strong></p>
-            <p>Issue Date: <strong>02/07/2027</strong></p>
+            <p>
+                Certificate #: 
+                <strong id="certificateNumber">260702620431549</strong>
+            </p>
+
+            <p>
+                Issue Date: 
+                <strong id="certificateDate">02/07/2027</strong>
+            </p>
         </div>
 
     </div>
@@ -182,6 +190,62 @@ hr{
     </div>
 
 </div>
+
+
+<script>
+
+/*
+===========================================
+DATA SERTIFIKAT
+===========================================
+*/
+
+const certificates = {
+
+    "260702620431549": {
+        name: "Jumadil Jati",
+        course: "Hydrogen Sulfide<br>Awareness Training",
+        date: "02/07/2027"
+    },
+
+    "260901620931828": {
+        name: "Mislan Raugu",
+        course: "Hydrogen Sulfide<br>Awareness Training",
+        date: "01/09/2027"
+    }
+
+};
+
+
+/*
+===========================================
+VERIFIKASI BERDASARKAN QR
+===========================================
+*/
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const certificateNumber = urlParams.get("cert");
+
+if (certificateNumber && certificates[certificateNumber]) {
+
+    const certificate = certificates[certificateNumber];
+
+    document.getElementById("certificateName").innerHTML =
+        certificate.name;
+
+    document.getElementById("certificateCourse").innerHTML =
+        certificate.course;
+
+    document.getElementById("certificateNumber").innerHTML =
+        certificateNumber;
+
+    document.getElementById("certificateDate").innerHTML =
+        certificate.date;
+
+}
+
+</script>
 
 </body>
 </html>
